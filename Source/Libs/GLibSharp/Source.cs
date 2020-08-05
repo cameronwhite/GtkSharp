@@ -26,8 +26,6 @@ namespace GLib {
 	using System.Collections.Generic;
 	using System.Runtime.InteropServices;
 
-	public delegate bool GSourceFunc ();
-
 	//
 	// Base class for IdleProxy and TimeoutProxy
 	//

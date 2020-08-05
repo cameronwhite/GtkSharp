@@ -25,12 +25,6 @@ namespace GLib {
 	using System;
 	using System.Runtime.InteropServices;
 
-	[Flags]
-	public enum ConnectFlags {
-		After = 1 << 0,
-		Swapped = 1 << 1,
-	}
-
 	public class Signal {
 
 		[Flags]

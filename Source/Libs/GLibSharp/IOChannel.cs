@@ -438,16 +438,6 @@ namespace GLib {
 	}
 
 	[Flags]
-	public enum IOCondition {
-		In = 1 << 0,
-		Out = 1 << 2,
-		Pri = 1 << 1,
-		Err = 1 << 3,
-		Hup = 1 << 4,
-		Nval = 1 << 5,
-	}
-
-	[Flags]
 	public enum IOFlags {
 		Append = 1 << 0,
 		Nonblock = 1 << 1,
@@ -464,12 +454,6 @@ namespace GLib {
 		Normal,
 		Eof,
 		Again,
-	}
-
-	public enum SeekType {
-		Cur,
-		Set,
-		End,
 	}
 }
 

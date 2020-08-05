@@ -23,42 +23,6 @@ namespace GLib {
 
 	using System;
 	using System.Runtime.InteropServices;
-	
-	public enum SpawnError {
-		Fork, 
-		Read,
-		Chdir,
-		Acces,
-		Perm, 
-		TooBig,
-		NoExec,
-		NameTooLong,
-		NoEnt,     
-		NoMem,    
-		NotDir,  
-		Loop,   
-		TxtBusy,   
-		IO,       
-		NFile,   
-		MFile,  
-		Inval, 
-		IsDir,
-		LibBad,   
-		Failed,  
-	}
-
-	[Flags]
-	public enum SpawnFlags {
-		LeaveDescriptorsOpen = 1 << 0,
-		DoNotReapChild         = 1 << 1,
-		SearchPath             = 1 << 2,
-		StdoutToDevNull        = 1 << 3,
-		StderrToDevNull        = 1 << 4,
-		ChildInheritsStdin     = 1 << 5,
-		FileAndArgvZero        = 1 << 6,
-	}
-
-	public delegate void SpawnChildSetupFunc ();
 
 	[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 	internal delegate void SpawnChildSetupFuncNative (IntPtr gch);

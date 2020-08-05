@@ -1,11 +1,75 @@
 <?xml version="1.0"?>
 <api>
   <namespace name="GLib" library="Library.GLib">
-    <enum name="ConnectFlags" cname="GConnectFlags" type="flags" />
-    <enum name="IOCondition" cname="GIOCondition" type="enum" />
-    <enum name="SeekType" cname="GSeekType" type="enum" />
-    <enum name="SpawnError" cname="GSpawnError" type="enum" />
-    <enum name="SpawnFlags" cname="GSpawnFlags" type="flags" />
+    <enum name="ConnectFlags" cname="GConnectFlags" type="flags">
+      <member cname="G_CONNECT_AFTER" name="After" value="1 &lt;&lt; 0" />
+      <member cname="G_CONNECT_SWAPPED" name="Swapped" value="1 &lt;&lt; 1" />
+    </enum>
+    <enum name="IOCondition" cname="GIOCondition" type="enum">
+      <member cname="G_IO_IN" name="In" value="1 &lt;&lt; 0" />
+      <member cname="G_IO_OUT" name="Out" value="1 &lt;&lt; 1" />
+      <member cname="G_IO_PRI" name="Pri" value="1 &lt;&lt; 2" />
+      <member cname="G_IO_ERR" name="Err" value="1 &lt;&lt; 3" />
+      <member cname="G_IO_HUP" name="Hup" value="1 &lt;&lt; 4" />
+      <member cname="G_IO_NVAL" name="Nval" value="1 &lt;&lt; 5" />
+    </enum>
+    <enum name="OptionArg" cname="GOptionArg" type="enum">
+      <member cname="G_OPTION_ARG_NONE" name="None" />
+      <member cname="G_OPTION_ARG_STRING" name="String" />
+      <member cname="G_OPTION_ARG_INT" name="Int" />
+      <member cname="G_OPTION_ARG_CALLBACK" name="Callback" />
+      <member cname="G_OPTION_ARG_FILENAME" name="Filename" />
+      <member cname="G_OPTION_ARG_STRING_ARRAY" name="StringArray" />
+      <member cname="G_OPTION_ARG_FILENAME_ARRAY" name="FilenameArray" />
+      <member cname="G_OPTION_ARG_DOUBLE" name="Double" />
+      <member cname="G_OPTION_ARG_INT64" name="Int64" />
+    </enum>
+    <enum name="OptionFlags" cname="GOptionFlags" type="flags">
+      <member cname="G_OPTION_FLAG_NONE" name="None" />
+      <member cname="G_OPTION_FLAG_HIDDEN" name="Hidden" value="1 &lt;&lt; 0" />
+      <member cname="G_OPTION_FLAG_IN_MAIN" name="InMain" value="1 &lt;&lt; 1" />
+      <member cname="G_OPTION_FLAG_REVERSE" name="Reverse" value="1 &lt;&lt; 2" />
+      <member cname="G_OPTION_FLAG_NO_ARG" name="NoArg" value="1 &lt;&lt; 3" />
+      <member cname="G_OPTION_FLAG_FILENAME" name="Filename" value="1 &lt;&lt; 4" />
+      <member cname="G_OPTION_FLAG_OPTIONAL_ARG" name="OptionalArg" value="1 &lt;&lt; 5" />
+      <member cname="G_OPTION_FLAG_NOALIAS" name="NoAlias" value="1 &lt;&lt; 6" />
+    </enum>
+    <enum name="SeekType" cname="GSeekType" type="enum" >
+      <member cname="G_SEEK_CUR" name="Cur" />
+      <member cname="G_SEEK_SET" name="Set" />
+      <member cname="G_SEEK_END" name="End" />
+    </enum>
+    <enum name="SpawnError" cname="GSpawnError" type="enum">
+      <member cname="G_SPAWN_ERROR_FORK" name="Fork" />
+      <member cname="G_SPAWN_ERROR_READ" name="Read" />
+      <member cname="G_SPAWN_ERROR_CHDIR" name="Chdir" />
+      <member cname="G_SPAWN_ERROR_ACCES" name="Acces" />
+      <member cname="G_SPAWN_ERROR_PERM" name="Perm" />
+      <member cname="G_SPAWN_ERROR_TOOBIG" name="TooBig" />
+      <member cname="G_SPAWN_ERROR_NOEXEC" name="NoExec" />
+      <member cname="G_SPAWN_ERROR_NAMETOOLONG" name="NameTooLong" />
+      <member cname="G_SPAWN_ERROR_NOENT" name="NoEnt" />
+      <member cname="G_SPAWN_ERROR_NOMEM" name="NoMem" />
+      <member cname="G_SPAWN_ERROR_NOTDIR" name="NotDir" />
+      <member cname="G_SPAWN_ERROR_LOOP" name="Loop" />
+      <member cname="G_SPAWN_ERROR_TXTBUSY" name="TxtBusy" />
+      <member cname="G_SPAWN_ERROR_IO" name="IO" />
+      <member cname="G_SPAWN_ERROR_NFILE" name="NFile" />
+      <member cname="G_SPAWN_ERROR_MFILE" name="MFile" />
+      <member cname="G_SPAWN_ERROR_INVAL" name="Inval" />
+      <member cname="G_SPAWN_ERROR_ISDIR" name="IsDir" />
+      <member cname="G_SPAWN_ERROR_LIBBAD" name="LibBad" />
+      <member cname="G_SPAWN_ERROR_FAILED" name="Failed" />
+    </enum>
+    <enum name="SpawnFlags" cname="GSpawnFlags" type="flags">
+      <member cname="G_SPAWN_LEAVE_DESCRIPTORS_OPEN" name="LeaveDescriptorsOpen" value="1 &lt;&lt; 0" />
+      <member cname="G_SPAWN_DO_NOT_REAP_CHILD" name="DoNotReapChild" value="1 &lt;&lt; 1" />
+      <member cname="G_SPAWN_SEARCH_PATH" name="SearchPath" value="1 &lt;&lt; 2" />
+      <member cname="G_SPAWN_STDOUT_TO_DEV_NULL" name="StdoutToDevNull" value="1 &lt;&lt; 3" />
+      <member cname="G_SPAWN_STDERR_TO_DEV_NULL" name="StderrToDevNull" value="1 &lt;&lt; 4" />
+      <member cname="G_SPAWN_CHILD_INHERITS_STDIN" name="ChildInheritsStdin" value="1 &lt;&lt; 5" />
+      <member cname="G_SPAWN_FILE_AND_ARGV_ZERO" name="FileAndArgvZero" value="1 &lt;&lt; 6" />
+    </enum>
     <callback name="GSourceFunc" cname="GSourceFunc">
       <return-type type="gboolean" />
       <parameters>
