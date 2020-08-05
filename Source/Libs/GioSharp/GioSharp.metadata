@@ -50,6 +50,7 @@
   <attr path="/api/namespace/interface[@cname='GAction']/property[@cname='name']" name="hidden">1</attr>
   <attr path="/api/namespace/interface[@cname='GAction']/property[@cname='parameter-type']" name="hidden">1</attr>
   <attr path="/api/namespace/interface[@cname='GAction']/property[@cname='state-type']" name="hidden">1</attr>
+  <attr path="/api/namespace/interface[@cname='GAction']/property[@cname='state']" name="hidden">1</attr>
   <attr path="/api/namespace/interface[@cname='GActionGroup']/method[@name='ActionAdded']" name="name">EmitActionAdded</attr>
   <attr path="/api/namespace/interface[@cname='GActionGroup']/method[@name='ActionEnabledChanged']" name="name">EmitActionEnabledChanged</attr>
   <attr path="/api/namespace/interface[@cname='GActionGroup']/method[@name='ActionRemoved']" name="name">EmitActionRemoved</attr>

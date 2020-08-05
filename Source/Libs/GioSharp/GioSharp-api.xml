@@ -726,7 +726,7 @@
       <property name="ParameterType" cname="parameter-type" type="GVariantType" readable="true" />
       <property name="Enabled" cname="enabled" type="gboolean" readable="true" />
       <property name="StateType" cname="state-type" type="GVariantType" readable="true" />
-      <property name="State" cname="state" type="variant" readable="true" />
+      <property name="State" cname="state" type="GVariant" readable="true" />
       <virtual_method name="GetName" cname="get_name">
         <return-type type="gchar*" />
         <parameters />
@@ -5263,9 +5263,9 @@
         <field name="Padding" cname="padding" type="gpointer" array_len="11" />
       </class_struct>
       <field name="Priv" cname="priv" type="GApplicationCommandLinePrivate*" />
-      <property name="Arguments" cname="arguments" type="variant" writeable="true" construct-only="true" />
-      <property name="Options" cname="options" type="variant" writeable="true" construct-only="true" />
-      <property name="PlatformData" cname="platform-data" type="variant" writeable="true" construct-only="true" />
+      <property name="Arguments" cname="arguments" type="GVariant" writeable="true" construct-only="true" />
+      <property name="Options" cname="options" type="GVariant" writeable="true" construct-only="true" />
+      <property name="PlatformData" cname="platform-data" type="GVariant" writeable="true" construct-only="true" />
       <property name="IsRemote" cname="is-remote" type="gboolean" readable="true" />
       <virtual_method name="PrintLiteral" cname="print_literal">
         <return-type type="void" />
