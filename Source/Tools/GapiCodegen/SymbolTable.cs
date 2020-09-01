@@ -110,6 +110,7 @@ namespace GtkSharp.Generation {
 #endif
 
 			// string types
+			AddType (new MarshalGen("char-value", "char", "byte", "GLib.Marshaller.CharToASCII({0})", ""));
 			AddType (new ConstStringGen ("const-gchar"));
 			AddType (new ConstStringGen ("const-xmlChar"));
 			AddType (new ConstStringGen ("const-char"));
@@ -226,6 +227,10 @@ namespace GtkSharp.Generation {
 			// HACK: If we don't detect this here, there is no
 			// way of indicating it in the symbol table
 			if (type == "void*" || type == "const-void*") return "gpointer";
+
+			// Char values are handled differently than char pointers (strings).
+			if (type == "char" || type == "gchar")
+				return "char-value";
 
 			string trim_type = type.TrimEnd('*');
 

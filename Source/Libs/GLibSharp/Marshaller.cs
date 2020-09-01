@@ -379,6 +379,11 @@ namespace GLib {
 
 			return mem;
 		}
+
+		public static byte CharToASCII(char c)
+        {
+			return System.Text.Encoding.ASCII.GetBytes(new char[] { c })[0];
+        }
 	}
 }
 
